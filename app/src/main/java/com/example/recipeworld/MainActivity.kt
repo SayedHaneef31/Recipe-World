@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
                     startActivity(Intent(this, HomeActivity::class.java))
                     finish()
                 },
-                20000
+                2000
             )
 
 
