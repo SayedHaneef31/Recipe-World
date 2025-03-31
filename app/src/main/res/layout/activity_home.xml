@@ -77,7 +77,7 @@
         android:layout_marginTop="18dp"
         android:background="@drawable/searchview"
         android:ems="10"
-        android:focusable="false"
+
         android:fontFamily="@font/poppins_medium_italic"
         android:hint="Search Recipie"
         android:inputType="text"
@@ -131,28 +131,29 @@
         android:id="@+id/recyclerTrending"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/progressBar"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:listitem="@layout/item_food_video" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        tools:listitem="@layout/item_food_2" />
 
-    <!-- "Popular Recipes" Title -->
+    <!-- "Popular places" Title -->
+
+    <!-- Progress Bar for Popular places -->
     <TextView
         android:id="@+id/textPopular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_medium_italic"
-        android:text="Popular Recipes"
+        android:text="Browse through popular places 📍"
         android:textColor="@color/black"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textStyle="bold"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/recyclerTrending" />
 
-    <!-- Progress Bar for Popular Recipes -->
     <ProgressBar
         android:id="@+id/progressPopular"
         android:layout_width="50dp"
@@ -169,11 +170,9 @@
         android:id="@+id/recyclerPopular"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/progressPopular"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:listitem="@layout/item_food_video" />
+        app:layout_constraintTop_toBottomOf="@id/progressPopular"
+        tools:listitem="@layout/restaurant_card" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

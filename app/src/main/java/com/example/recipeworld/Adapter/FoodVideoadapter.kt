@@ -25,7 +25,7 @@ class FoodVideoadapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VideoViewHolder {
         val view=LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_food_video,parent,false)
+            .inflate(R.layout.item_food_2,parent,false)
         return VideoViewHolder(view)
     }
 
