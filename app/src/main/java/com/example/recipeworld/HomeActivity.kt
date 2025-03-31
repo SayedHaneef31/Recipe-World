@@ -18,7 +18,6 @@ import com.example.recipeworld.Data.FoodVideo
 import com.example.recipeworld.Data.Restaurant
 import com.example.recipeworld.Instance.RetrofitInstance
 import com.example.recipeworld.databinding.ActivityHomeBinding
-import com.example.recipeworld.databinding.ActivityMainBinding
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import kotlinx.coroutines.launch
@@ -56,9 +55,10 @@ class HomeActivity : AppCompatActivity() {
         // Fetch trending videos
         fetchPopularPlaces()
 
-        binding.editTextText.setOnClickListener {
-            var searchText = binding.editTextText.text.toString()
 
+
+        binding.editTextText.setOnClickListener {
+            startActivity(Intent(this, SearchActivity::class.java))
         }
 
 

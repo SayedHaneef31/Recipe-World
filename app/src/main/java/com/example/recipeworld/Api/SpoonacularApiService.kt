@@ -1,8 +1,11 @@
 package com.example.recipeworld.Api
 
 import com.example.recipeworld.Data.FoodVideoResponse
+import com.example.recipeworld.Data.RecipeSearchResponse
+import com.example.recipeworld.Data.RecipeSummary
 import com.example.recipeworld.Data.RestaurantSearchResponse
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface SpoonacularApiService
@@ -23,5 +26,19 @@ interface SpoonacularApiService
         @Query("apiKey") apiKey: String,
 
         ) : RestaurantSearchResponse    // Expected response
+
+    @GET("recipes/complexSearch")
+    suspend fun searchRecipes(
+        @Query("query") query: String,
+        @Query("number") number: Int = 15,
+        @Query("apiKey") apiKey: String
+    ): RecipeSearchResponse
+
+
+    @GET("recipes/{id}/summary")
+    suspend fun getRecipeSummary(
+        @Path("id") id: Int,
+        @Query("apiKey") apiKey: String
+    ): RecipeSummary
 
 }

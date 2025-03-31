@@ -77,7 +77,7 @@
         android:layout_marginTop="18dp"
         android:background="@drawable/searchview"
         android:ems="10"
-
+        android:focusable="false"
         android:fontFamily="@font/poppins_medium_italic"
         android:hint="Search Recipie"
         android:inputType="text"
@@ -104,6 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="85dp"
         android:layout_marginEnd="61dp"
         android:fontFamily="@font/poppins_medium_italic"
         android:text="Look what's trending ❤️"
